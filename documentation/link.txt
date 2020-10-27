@@ -1,0 +1,15 @@
+Creation de pdf en PHP
+https://tcpdf.org/examples/
+
+Dessin dans un canvas
+https://github.com/krisrak/html5-canvas-drawing-app
+https://html2canvas.hertzen.com/
+https://github.com/krisrak/html5-canvas-drawing-app/issues/6
+
+Pas possible
+https://github.com/barduinor/cordova-plugin-sketch (unmaintenance)
+https://github.com/zobbe/cordova-plugin-pernexus-draw (IOS only)
+
+PDF READER (payant)
+https://github.com/PDFTron/pdftron-cordova
+https://www.radaeepdf.com/download/cordova-plugin
