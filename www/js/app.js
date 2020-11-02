@@ -44,16 +44,6 @@ var app  = new Framework7({
   routes: routes,
 });
 
-// Init/Create views
-var homeView = app.views.create('#view-home', {
-  url: '/'
-});
-var catalogView = app.views.create('#view-catalog', {
-  url: '/catalog/'
-});
-var settingsView = app.views.create('#view-settings', {
-  url: '/settings/'
-});
 
 
 // Login Screen Demo

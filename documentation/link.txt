@@ -1,10 +1,18 @@
 Creation de pdf en PHP
 https://tcpdf.org/examples/
 
+PDF creator en Javascript
+https://www.npmjs.com/package/cordova-pdf-generator#demo~
+https://dzone.com/articles/how-to-write-a-html-to-pdf-app-for-androidios-usin
+
+Creation de pdf en HTML
+https://www.npmjs.com/package/cordova-pdf-generator#gstarted
+
 Dessin dans un canvas
 https://github.com/krisrak/html5-canvas-drawing-app
 https://html2canvas.hertzen.com/
 https://github.com/krisrak/html5-canvas-drawing-app/issues/6
+
 
 Pas possible
 https://github.com/barduinor/cordova-plugin-sketch (unmaintenance)
@@ -13,3 +21,7 @@ https://github.com/zobbe/cordova-plugin-pernexus-draw (IOS only)
 PDF READER (payant)
 https://github.com/PDFTron/pdftron-cordova
 https://www.radaeepdf.com/download/cordova-plugin
+
+PBKDF2 alborithm for password
+https://github.com/padloc/cordova-plugin-pbkdf2
+https://nakedsecurity.sophos.com/2013/11/20/serious-security-how-to-store-your-users-passwords-safely/#:~:text=In%20summary%2C%20here%20is%20our,the%20core%20hash%20inside%20PBKDF2.

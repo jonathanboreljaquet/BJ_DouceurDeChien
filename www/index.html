@@ -2,11 +2,10 @@
 <html>
 <head>
     <title>Sketch Pad</title>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
 	<link rel="stylesheet" href="js/lib/jquery.mobile/jquery.mobile-1.2.0.min.css" />
 	<script src="js/lib/jquery/jquery-1.8.2.min.js"></script>
 	<script src="js/lib/jquery.mobile/jquery.mobile-1.2.0.min.js"></script>
-	<script src="js/app.js"></script>
     <style type="text/css">
 	  body {
 		margin:0px;
@@ -294,6 +293,14 @@ function onSuccess(acceleration) {
 }
 function canvasToBase64(){
   var imgData = canvas.toDataURL();
+  let options = {
+                documentSize: 'A4',
+                type: 'base64'
+              }
+ 
+pdf.fromData('<html><h1>Hello World</h1></html>', options)
+    .then((base64)=>'ok')   // it will
+    .catch((err)=>console.err(err))
 }
 // onError: Failed to get the acceleration
 function onError() {
@@ -337,13 +344,18 @@ function buzzDevice(pos){
 			</div>
 			<div class="palette-box">
 				<div class="palette black"></div>
+				<button id="btnFormat" onclick="canvasToBase64()">Click</button>
+				<img width="200" height="200" src="" alt="Italian Trulli" id="imgDisplay">
 			</div>		
 			<div style="clear:both"></div>
 		</div>
     </div>
 	<div id="debug" style="display:none;position:absolute;top:45px;left:1px;right:1px;height:60px;background-color:#eea"></div>
-    <div id="etchHelp">Turning <strong>Etch ON</strong> will enable drawing using the device's accelerometer by tilting the device in any direction.</div>
+	<div id="etchHelp">Turning <strong>Etch ON</strong> will enable drawing using the device's accelerometer by tilting the device in any direction.</div>
 </div> 
-<script src="http://debug-software.intel.com/target/target-script-min.js#1b241e6f-8fea-4baf-a130-0a2469b2b965"/>
+<script src="cordova.js"></script>
+<script src="js/framework7.bundle.min.js"></script>
+<script src="js/routes.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
