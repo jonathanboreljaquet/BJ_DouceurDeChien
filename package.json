@@ -17,17 +17,22 @@
     "cordova-browser": "^6.0.0",
     "cordova-ios": "^6.1.1",
     "cordova-pdf-generator": "^2.1.1",
+    "cordova-plugin-sketch": "git+https://github.com/blinkmobile/cordova-plugin-sketch.git",
     "cordova-plugin-whitelist": "^1.3.4"
   },
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {},
-      "cordova-pdf-generator": {}
+      "cordova-pdf-generator": {},
+      "cordova-plugin-sketch": {}
     },
     "platforms": [
       "android",
       "browser",
       "ios"
     ]
+  },
+  "dependencies": {
+    "responsive-sketchpad": "^1.2.0"
   }
 }

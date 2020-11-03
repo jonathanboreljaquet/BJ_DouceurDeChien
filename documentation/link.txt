@@ -12,6 +12,8 @@ Dessin dans un canvas
 https://github.com/krisrak/html5-canvas-drawing-app
 https://html2canvas.hertzen.com/
 https://github.com/krisrak/html5-canvas-drawing-app/issues/6
+https://github.com/barduinor/cordova-plugin-sketch
+https://github.com/tsand/responsive-sketchpad
 
 
 Pas possible
