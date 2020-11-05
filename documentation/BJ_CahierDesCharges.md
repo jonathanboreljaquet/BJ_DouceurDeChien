@@ -72,6 +72,7 @@ Le client aura également la possibilité de se connecter afin de consulter ses 
         <td>not null</td>
         <td>Booléan définisant le rôle de l'utilisateur.</td>
     </tr>
+</table>
 
    <table>
     <tr>
@@ -95,6 +96,7 @@ Le client aura également la possibilité de se connecter afin de consulter ses 
         <td>not null</td>
         <td>Chemin d'accès du document.</td>
     </tr>
+</table>
 
    <table>
     <tr>
@@ -118,6 +120,8 @@ Le client aura également la possibilité de se connecter afin de consulter ses 
         <td>not null</td>
         <td>Nom du chien.</td>
     </tr>
+</table>
+
 
 ## Liste des fonctionnalités
 
