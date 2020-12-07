@@ -79,7 +79,13 @@ window.onresize = function (e) {
 
 
 // prep some variables
+var title = 'My Event Title';
+var loc = 'My Event Location';
+var notes = 'My interesting Event notes.';
+var startDate = new Date();
+var endDate = new Date();
 
+// function
 function onSuccess(msg) {
   alert('Calendar success: ' + JSON.stringify(msg));
 }
@@ -96,4 +102,10 @@ function openCalendar() {
   // today + 3 days
   var d = new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000);
   window.plugins.calendar.openCalendar(d, onSuccess, onError);
+}
+function createCalendarEventInteractively() {
+  window.plugins.calendar.createEventInteractively(title, loc, notes, startDate, endDate, onSuccess, onError);
+}
+function createCalendarEvent() {
+  window.plugins.calendar.createEvent(title, loc, notes, startDate, endDate, onSuccess, onError);
 }
