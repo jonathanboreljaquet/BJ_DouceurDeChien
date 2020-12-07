@@ -17,6 +17,7 @@
     "cordova-browser": "^6.0.0",
     "cordova-ios": "^6.1.1",
     "cordova-pdf-generator": "^2.1.1",
+    "cordova-plugin-calendar": "^5.1.5",
     "cordova-plugin-sketch": "git+https://github.com/blinkmobile/cordova-plugin-sketch.git",
     "cordova-plugin-whitelist": "^1.3.4"
   },
@@ -24,7 +25,11 @@
     "plugins": {
       "cordova-plugin-whitelist": {},
       "cordova-pdf-generator": {},
-      "cordova-plugin-sketch": {}
+      "cordova-plugin-sketch": {},
+      "cordova-plugin-calendar": {
+        "CALENDAR_USAGE_DESCRIPTION": "This app uses your calendar",
+        "CONTACTS_USAGE_DESCRIPTION": " "
+      }
     },
     "platforms": [
       "android",

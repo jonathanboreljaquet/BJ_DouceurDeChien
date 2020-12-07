@@ -74,3 +74,26 @@ function downloadPng() {
 window.onresize = function (e) {
   pad.resize(el.offsetWidth);
 }
+
+//calendar
+
+
+// prep some variables
+
+function onSuccess(msg) {
+  alert('Calendar success: ' + JSON.stringify(msg));
+}
+function onError(msg) {
+  alert('Calendar error: ' + JSON.stringify(msg));
+}
+function createCalendar() {
+  var options = window.plugins.calendar.getCreateCalendarOptions();
+  options.calendarName = "MyCordovaCalendar";
+  options.calendarColor = "#FF0000"; // red
+  window.plugins.calendar.createCalendar(options, onSuccess, onError);
+}
+function openCalendar() {
+  // today + 3 days
+  var d = new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000);
+  window.plugins.calendar.openCalendar(d, onSuccess, onError);
+}
