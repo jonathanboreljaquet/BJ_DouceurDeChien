@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
   <script src="js/controlAccess.js"></script>
@@ -13,7 +13,7 @@
   <meta name="theme-color" content="#2196f3">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
-  <title>Connexion</title>
+  <title>Accueil</title>
 
   <link rel="stylesheet" href="css/css/bootstrap-table.min.css">
   <link rel="stylesheet" href="css/css/bootstrap.min.css">
@@ -23,28 +23,38 @@
 
 <body style="overflow-y: scroll;">
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#"><img src="img/logoApp.jpg" width="30" height="30"
-          class="d-inline-block align-top" alt="">DouceurDeChien</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul id="listNavbar" class="navbar-nav mr-auto">
-        </ul>
+    <nav id="navigation" class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="img/logoApp.jpg" width="30" height="30"
+              class="d-inline-block align-top" alt="">Douceur de chien</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul id="ListLeftItem" class="navbar-nav"> 
+          </ul>
+          <ul id="ListRightItem" class="navbar-nav ms-auto">
+          </ul>
+        </div>
       </div>
     </nav>
   </header>
   <main role="main">
     <div class="container">
-      <h1>Home</h1>
-      <table id="table">
+      <h1>Accueil</h1>
+      <table 
+      id="table"
+      data-height="500"
+      data-search="true"
+      data-show-columns="true"
+      data-pagination="true",
+      data-locale = "fr-CH">
         <thead>
           <tr>
-            <th data-field="id">ID</th>
-            <th data-field="name">Item Name</th>
-            <th data-field="price">Item Price</th>
+            <th data-field="id">id</th>
+            <th data-field="email">email</th>
+            <th data-field="firstname">firstname</th>
+            <th data-field="secondname">secondname</th>
           </tr>
         </thead>
       </table>
@@ -53,6 +63,7 @@
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/js/bootstrap.bundle.min.js"></script>
   <script src="js/js/bootstrap-table.min.js"></script>
+  <script src="js/js/bootstrap-table-fr-CH.js"></script>
   <script src="js/home.js"></script>
   <!-- Responsive-sketchpad -->
   <script src="js/lib/responsive-sketchpad/dist/sketchpad.js"></script>

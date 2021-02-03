@@ -12,7 +12,7 @@
   <meta name="theme-color" content="#2196f3">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
-  <title>Connexion</title>
+  <title>Inscription</title>
 
   <link rel="stylesheet" href="css/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/icons.css">
@@ -21,16 +21,19 @@
 
 <body style="overflow-y: scroll;">
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#"><img src="img/logoApp.jpg" width="30" height="30"
-          class="d-inline-block align-top" alt="">DouceurDeChien</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul id="listNavbar" class="navbar-nav mr-auto">
-        </ul>
+    <nav id="navigation" class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="img/logoApp.jpg" width="30" height="30"
+              class="d-inline-block align-top" alt="">Douceur de chien</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul id="ListLeftItem" class="navbar-nav"> 
+          </ul>
+          <ul id="ListRightItem" class="navbar-nav ms-auto">
+          </ul>
+        </div>
       </div>
     </nav>
   </header>
@@ -72,7 +75,7 @@
   </main>
 
   <script src="js/jquery-3.5.1.min.js"></script>
-  <script src="js/js/bootstrap.bundle.min.js"></script>
+  <script src="js/js/bootstrap.min.js"></script>
   <!-- Responsive-sketchpad -->
   <script src="js/lib/responsive-sketchpad/dist/sketchpad.js"></script>
   <!-- Cordova -->

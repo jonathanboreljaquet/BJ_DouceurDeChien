@@ -31,23 +31,38 @@
 // }
 
 $(function(){
-  var html = ""; 
-  var api_token = localStorage.getItem("api_token");  
+  var htmlLeftItem = ""; 
+  var htmlRightItem = ""; 
+  var api_token = localStorage.getItem("api_token");
+  var isAdministrator = localStorage.getItem("isAdministrator");   
   if(api_token==""||api_token==null ||api_token=="null" || api_token=="undefined")
   { 
-    html+="<li class='nav-item active'>"+
+    htmlLeftItem+="<li class='nav-item active'>"+
               "<a class='nav-link' href='inscription.html'>Inscription</a>"+
           "</li>"+
           "<li class='nav-item'>"+
-               "<a class='nav-link' href='connection.html'>Connexion</a>"+
+              "<a class='nav-link' href='connection.html'>Connexion</a>"+
           "</li>";
   }
   else{
-    html+="<li class='nav-item active'>"+
-              "<a class='nav-link' href='home.html'>Accueil</a>"+
-          "</li>";
+    if (isAdministrator) {
+      htmlLeftItem+="<li class='nav-item active'>"+
+                "<a class='nav-link' href='home.html'>Accueil</a>"+
+            "</li>";
+    }
+    htmlRightItem+="<li class='nav-item active'>"+
+    '<a id="btnLogout" class="btn btn-danger nav-link" role="button">Deconnexion</a>'
+"</li>";
   }
-  $("#listNavbar").append(html);
+  $("#ListLeftItem").append(htmlLeftItem);
+  $("#ListRightItem").append(htmlRightItem);
+});
+
+$("#btnLogout").on("click", function () {
+  localStorage.removeItem("isAdministrator");
+  localStorage.removeItem("api_token");
+  window.location.replace("connection.html")
+
 });
 
 $("#btnInscription").on("click", function () {
@@ -97,6 +112,7 @@ function connection(email, password) {
     success: function (code_html, statut) {
       showAlert("success", "Vous êtes maintenant connecté");
       localStorage.setItem("api_token",code_html.api_token);
+      localStorage.setItem("isAdministrator",code_html.isAdministrator);
       window.location.replace("home.html")
     },
     error: function (resultat) {
