@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/css/bootstrap-table.min.css">
   <link rel="stylesheet" href="css/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/bootstrap-icons/bootstrap-icons.css">
   <link rel="stylesheet" href="css/app.css">
 </head>
 
@@ -51,10 +52,11 @@
       data-locale = "fr-CH">
         <thead>
           <tr>
-            <th data-field="id">id</th>
-            <th data-field="email">email</th>
-            <th data-field="firstname">firstname</th>
-            <th data-field="secondname">secondname</th>
+            <th data-field="id">ID</th>
+            <th data-field="email">Email</th>
+            <th data-field="firstname">Prénom</th>
+            <th data-field="secondname">Nom</th>
+            <th data-field="operate" data-formatter="operateFormatter" data-events="operateEvents">Edition</th>
           </tr>
         </thead>
       </table>
@@ -64,7 +66,6 @@
   <script src="js/js/bootstrap.bundle.min.js"></script>
   <script src="js/js/bootstrap-table.min.js"></script>
   <script src="js/js/bootstrap-table-fr-CH.js"></script>
-  <script src="js/home.js"></script>
   <!-- Responsive-sketchpad -->
   <script src="js/lib/responsive-sketchpad/dist/sketchpad.js"></script>
   <!-- Cordova -->
@@ -73,6 +74,7 @@
   <script src="js/routes.js"></script>
   <!-- Your custom app scripts -->
   <script src="js/app.js"></script>
+  <script src="js/bootstrapTable.js"></script>
 </body>
 
 </html>
