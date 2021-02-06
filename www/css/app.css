@@ -1,17 +1,24 @@
 /* Your app styles here */
+
 .ios .tabbar-labels .tab-link:not(.tab-link-active) .icon-ios-fill {
-  display: none;
+    display: none;
 }
+
 .ios .tabbar-labels .tab-link.tab-link-active .icon:not(.icon-ios-fill) {
-  display: none;
+    display: none;
 }
 
 @media (min-width: 768px) {
-  .navbar-brand.abs
-      {
-          position: absolute;
-          width: 100%;
-          left: 0;
-          text-align: center;
-      }
-  }
+    .navbar-brand.abs {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+}
+
+html,
+body {
+    width: auto!important;
+    overflow-x: hidden!important
+}
