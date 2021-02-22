@@ -126,12 +126,9 @@ function connection(email, password) {
         error: function(resultat) {
             var allErrors = resultat.responseJSON;
             if ('errors' in allErrors) {
-                if ('email' in allErrors.errors) {
-                    showAlert("danger", allErrors.errors.email);
-                }
-                if ('password' in allErrors.errors) {
-                    showAlert("danger", allErrors.errors.password);
-                }
+                $.each(allErrors.errors, function(index, value) {
+                    showAlert("danger", value);
+                });
             }
             if ('failed' in allErrors) {
                 showAlert("danger", allErrors.failed);

@@ -8,6 +8,7 @@ php artisan migrate:refresh --seed
 php artisan route:list
 
 
-Revoir le contrôle des accès au différentes pages de l'app
--isAdministrator n'est pas set dans le localstorage
+
 Lancer un script avant le chargement du DOM
+création du contrat
+base64 validation laravel

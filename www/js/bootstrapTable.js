@@ -1,5 +1,8 @@
-var api_token = localStorage.getItem("api_token");
-InitializeDataTableOfClients(api_token);
+$(function() {
+    var api_token = localStorage.getItem("api_token");
+    InitializeDataTableOfClients(api_token);
+});
+
 
 function InitializeDataTableOfClients(token) {
     $.ajax({
@@ -10,7 +13,7 @@ function InitializeDataTableOfClients(token) {
         type: 'GET',
         dataType: 'json',
         success: function(data, statut) {
-            var $table = $('#table')
+            var $table = $('#tableClient')
             $table.bootstrapTable({
                 data: data,
             })
@@ -21,8 +24,7 @@ function InitializeDataTableOfClients(token) {
     });
 }
 
-
-function operateFormatter(value, row, index) {
+function operateFormatterClient(value, row, index) {
     return [
         '<a class="edit" href="javascript:void(0)" title="Edit">',
         '<i class="bi bi-tools" style="font-size: 2rem;"></i>',
@@ -30,7 +32,7 @@ function operateFormatter(value, row, index) {
     ].join('')
 }
 
-window.operateEvents = {
+window.operateEventsClient = {
     'click .edit': function(e, value, row, index) {
         localStorage.setItem("api_token_client", row["api_token"]);
         window.location.href = "client.html";

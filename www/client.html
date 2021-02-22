@@ -12,10 +12,10 @@
     <meta name="msapplication-tap-highlight" content="no">
     <title>Client</title>
 
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/css/bootstrap-table.min.css">
     <link rel="stylesheet" href="css/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="css/app.css">
 </head>
 
@@ -38,7 +38,7 @@
     </header>
     <main role="main">
         <div class="container">
-            <h1>Ficher client</h1>
+            <h1>Fiche client</h1>
             <dl class="row">
                 <dt class="col-sm-3">Prénom</dt>
                 <dd class="col-sm-9" id="firstname"></dd>
@@ -53,15 +53,71 @@
             </dl>
             <dl class="row" id="dog">
                 <dt class="col-sm-3">Chien(s)</dt>
+                <dd>
+                    <div id="toolbardog">
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="addDogModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Ajout d'un chien</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="dog_name_input" class="col-form-label">Nom:</label>
+                                            <input type="text" class="form-control" id="dog_name_input">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="dog_chip_id_input" class="col-form-label">Numéro de puce:</label>
+                                            <input type="text" class="form-control" id="dog_chip_id_input">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                    <button id="btnAddDog" type="button " class="btn btn-primary ">Ajouter le chien</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="alertPopUp"></div>
+                    </div>
+                    <table id="tableDog" data-toolbar="#toolbardog" data-height="400" data-locale="fr-CH">
+                        <thead>
+                            <tr>
+                                <th data-field="name">Nom</th>
+                                <th data-field="chip_id">Numéro de puce</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </dd>
             </dl>
-            <dl class="row" id="document">
-                <dt class="col-sm-3">Document(s)</dt>
+            <dl class="row " id="document">
+                <dt class="col-sm-3 ">Document(s)</dt>
+                <dd>
+                    <div id="toolbardocument">
+                    </div>
+                    <table id="tableDocument" data-toolbar="#toolbardocument" data-height="400" data-locale="fr-CH">
+                        <thead>
+                            <tr>
+                                <th data-field="type">Type du document</th>
+                                <th data-field="serial_number">Numéro de série</th>
+                                <th data-field="operate" data-align="center" data-formatter="operateFormatterDocument" data-events="operateEventsDocument">Téléchargement</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </dd>
             </dl>
-            <dl class="row" id="parentButtonReturn">
+            <dl class="row " id="parentButtonReturn"></dl>
 
-            </dl>
         </div>
     </main>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/js/bootstrap.bundle.min.js"></script>
+    <script src="js/js/bootstrap-table.min.js"></script>
+    <script src="js/js/bootstrap-table-fr-CH.js"></script>
     <!-- Responsive-sketchpad -->
     <script src="js/lib/responsive-sketchpad/dist/sketchpad.js"></script>
     <!-- Cordova -->
