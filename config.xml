@@ -15,10 +15,63 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <platform name="browser">
+    <preference name="SplashScreen" value="/www/img/logoApp.jpg" />
+        <!-- defaults to "true" -->
+        <preference name="SplashScreenDelay" value="1000" />
+        <!-- defaults to "3000" -->
+        <preference name="SplashScreenBackgroundColor" value="#1e1e1e" />
+        <!-- defaults to "#464646" -->
+        <preference name="ShowSplashScreen" value="true" />
+        <!-- defaults to "true" -->
+        <preference name="SplashScreenWidth" value="300" />
+        <!-- defaults to "170" -->
+        <preference name="SplashScreenHeight" value="300" />
+        <splash src="www/img/hdpi.png" density="hdpi"/>
+        <splash src="www/img/ldpi.png" density="ldpi"/>
+        <splash src="www/img/mdpi.png" density="mdpi"/>
+        <splash src="www/img/xhdpi.png" density="xhdpi"/>
+        <splash src="www/img/xxhdpi.png" density="xxhdpi"/>
+        <splash src="www/img/xxxhdpi.png" density="xxxhdpi"/>
+    </platform>
     <platform name="android">
+    <preference name="SplashScreen" value="/www/img/logoApp.jpg" />
+        <!-- defaults to "true" -->
+        <preference name="SplashScreenDelay" value="1000" />
+        <!-- defaults to "3000" -->
+        <preference name="SplashScreenBackgroundColor" value="#1e1e1e" />
+        <!-- defaults to "#464646" -->
+        <preference name="ShowSplashScreen" value="true" />
+        <!-- defaults to "true" -->
+        <preference name="SplashScreenWidth" value="300" />
+        <!-- defaults to "170" -->
+        <preference name="SplashScreenHeight" value="300" />
+        <splash src="www/img/hdpi.png" density="hdpi"/>
+        <splash src="www/img/ldpi.png" density="ldpi"/>
+        <splash src="www/img/mdpi.png" density="mdpi"/>
+        <splash src="www/img/xhdpi.png" density="xhdpi"/>
+        <splash src="www/img/xxhdpi.png" density="xxhdpi"/>
+        <splash src="www/img/xxxhdpi.png" density="xxxhdpi"/>
         <allow-intent href="market:*" />
     </platform>
     <platform name="ios">
+    <preference name="SplashScreen" value="/www/img/logoApp.jpg" />
+        <!-- defaults to "true" -->
+        <preference name="SplashScreenDelay" value="1000" />
+        <!-- defaults to "3000" -->
+        <preference name="SplashScreenBackgroundColor" value="#1e1e1e" />
+        <!-- defaults to "#464646" -->
+        <preference name="ShowSplashScreen" value="true" />
+        <!-- defaults to "true" -->
+        <preference name="SplashScreenWidth" value="300" />
+        <!-- defaults to "170" -->
+        <preference name="SplashScreenHeight" value="300" />
+        <splash src="www/img/hdpi.png" density="hdpi"/>
+        <splash src="www/img/ldpi.png" density="ldpi"/>
+        <splash src="www/img/mdpi.png" density="mdpi"/>
+        <splash src="www/img/xhdpi.png" density="xhdpi"/>
+        <splash src="www/img/xxhdpi.png" density="xxhdpi"/>
+        <splash src="www/img/xxxhdpi.png" density="xxxhdpi"/>
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>

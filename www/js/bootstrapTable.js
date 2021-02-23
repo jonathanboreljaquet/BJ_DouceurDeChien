@@ -27,7 +27,7 @@ function InitializeDataTableOfClients(token) {
 function operateFormatterClient(value, row, index) {
     return [
         '<a class="edit" href="javascript:void(0)" title="Edit">',
-        '<i class="bi bi-tools" style="font-size: 2rem;"></i>',
+        '<i class="bi bi-pencil" style="font-size: 2rem;"></i>',
         '</a>  ',
     ].join('')
 }

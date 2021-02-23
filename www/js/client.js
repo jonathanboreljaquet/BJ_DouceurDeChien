@@ -37,11 +37,14 @@ function DisplayClientInformation(data, isAdministrator) {
     if (isAdministrator == "1") {
         $("#parentButtonReturn").append($('<button id="btnReturn"class="btn btn-primary" type="button">Retour</button>'));
         $("#toolbardog").append($('<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#addDogModal">Ajouter un chien</button>'));
+        $("#toolbardocument").append($('<button id="btnMoveCreateFile" type="button" class="btn btn-secondary">Ajouter un document</button>'));
     }
 }
 $("#parentButtonReturn").on("click", "#btnReturn", function() {
-    window.history.back();
-
+    window.location.href = "home.html";
+});
+$("#toolbardocument").on("click", "#btnMoveCreateFile", function() {
+    window.location.href = "index.html";
 });
 
 function InitializeDataTableOfDogs(token) {

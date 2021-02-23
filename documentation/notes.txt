@@ -10,5 +10,12 @@ php artisan route:list
 
 
 Lancer un script avant le chargement du DOM
-création du contrat
+
 base64 validation laravel
+
+création du contrat
+-Forfait
+-Checkbox
+-clear Signature
+-vérifier check box avant de créer
+-preview pdf cordova https://github.com/sitewaerts/cordova-plugin-document-viewer

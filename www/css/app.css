@@ -22,3 +22,28 @@ body {
     width: auto!important;
     overflow-x: hidden!important
 }
+
+#sketchpad canvas {
+    border: .2rem solid #eee;
+    cursor: crosshair;
+    display: block;
+}
+
+#btnReturn {
+    border-radius: 0%;
+}
+
+#btnCreateContract {
+    margin-top: 10px;
+    border-radius: 0%;
+}
+
+#btnConnection {
+    margin-top: 10px;
+    border-radius: 0%;
+}
+
+#btnInscription {
+    margin-top: 10px;
+    border-radius: 0%;
+}
