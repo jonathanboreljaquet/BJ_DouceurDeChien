@@ -1,4 +1,8 @@
-/* Your app styles here */
+/**
+ * Auteur : Jonathan Borel-Jaquet - T.IS-E2A
+ * Date : 01/03/21
+ * Description : Fichier css de l'application
+ */
 
 .ios .tabbar-labels .tab-link:not(.tab-link-active) .icon-ios-fill {
     display: none;
@@ -20,7 +24,8 @@
 html,
 body {
     width: auto!important;
-    overflow-x: hidden!important
+    overflow-x: hidden!important;
+    padding-top: 30px;
 }
 
 #sketchpad canvas {
@@ -29,21 +34,35 @@ body {
     display: block;
 }
 
-#btnReturn {
-    border-radius: 0%;
+.customButton {
+    display: inline-block;
+    padding: 0.7em 1.7em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+    box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17), inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+    text-align: center;
+    position: relative;
 }
 
-#btnCreateContract {
-    margin-top: 10px;
-    border-radius: 0%;
+.customButton:active {
+    box-shadow: inset 0 0.6em 2em -0.3em rgba(0, 0, 0, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
 }
 
-#btnConnection {
-    margin-top: 10px;
-    border-radius: 0%;
+@media all and (max-width:30em) {
+    .customButton {
+        display: block;
+        margin: 0.4em auto;
+    }
 }
 
-#btnInscription {
-    margin-top: 10px;
-    border-radius: 0%;
+.alert-fix-bottom {
+    position: fixed;
+    bottom: 5px;
+    left: 2%;
+    width: 96%;
 }

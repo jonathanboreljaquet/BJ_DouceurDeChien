@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.boreljaquet.douceurDeChien" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>DouceurDeChienApp</name>
+    <name>Douceur de chien app</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
@@ -34,7 +34,13 @@
         <splash src="www/img/xxhdpi.png" density="xxhdpi"/>
         <splash src="www/img/xxxhdpi.png" density="xxxhdpi"/>
     </platform>
-    <platform name="android">
+    <platform name="android">      
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="AndroidExtraFilesystems" value="files,cache, sdcard, cache-external, files-external" />
+    <preference name="phonegap-version" value="cli-8.0.0" />
+
+    <icon src="/www/img/logoApp.jpg" density="ldpi" />
+    
     <preference name="SplashScreen" value="/www/img/logoApp.jpg" />
         <!-- defaults to "true" -->
         <preference name="SplashScreenDelay" value="1000" />
@@ -55,6 +61,7 @@
         <allow-intent href="market:*" />
     </platform>
     <platform name="ios">
+    <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
     <preference name="SplashScreen" value="/www/img/logoApp.jpg" />
         <!-- defaults to "true" -->
         <preference name="SplashScreenDelay" value="1000" />

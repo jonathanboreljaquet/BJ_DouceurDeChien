@@ -13,9 +13,6 @@ Lancer un script avant le chargement du DOM
 
 base64 validation laravel
 
-création du contrat
--Forfait
--Checkbox
--clear Signature
--vérifier check box avant de créer
--preview pdf cordova https://github.com/sitewaerts/cordova-plugin-document-viewer
+Visualisation contrat
+
+

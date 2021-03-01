@@ -1,7 +1,7 @@
 <!--
 Auteur : Jonathan Borel-Jaquet - T.IS-E2A
 Date : 01/03/21
-Description : Vue html permettant l'affichage des clients pour l'admin.
+Description : Vue html de création de document.
  -->
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,8 +16,7 @@ Description : Vue html permettant l'affichage des clients pour l'admin.
     <meta name="theme-color" content="#2196f3">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
-    <title>Administration</title>
-
+    <title>Création de contrat</title>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-table/bootstrap-table.min.css">
     <link rel="stylesheet" href="css/bootstrap-icons/bootstrap-icons.css">
@@ -43,30 +42,52 @@ Description : Vue html permettant l'affichage des clients pour l'admin.
     </header>
     <main role="main">
         <div class="container">
-            <h1>Administration</h1>
-            <table id="tableClient" data-height="700" data-search="true" data-show-columns="true" data-pagination="true" data-locale="fr-CH">
-                <thead>
-                    <tr>
-                        <th data-field="firstname">Prenom</th>
-                        <th data-field="secondname">Nom</th>
-                        <th data-field="operate" data-align="center" data-formatter="operateFormatterClient" data-events="operateEventsClient">Edition</th>
-                    </tr>
-                </thead>
-            </table>
+            <h1>Création du contrat</h1>
+            <div class="row">
+                <h3>Forfait</h3>
+                <select id="package" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                  <option selected value="1">Bilan d’évaluation : 70 € / 80 CHF</option>
+                  <option value="2">Bilan + 1 séance d’éducation : 125 € / 140 CHF</option>
+                  <option value="3">Forfait bilan + 3 séances : 230 € / 250 CHF</option>
+                  <option value="4">Forfait bilan + 6 séances : 400 € / 440 CHF</option>
+                  <option value="5">Forfait bilan + 9 séances : 520 € / 560 CHF</option>
+                </select>
+            </div>
+            <div class="row">
+                <div style="margin-left: 15px;" class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkboxDocument">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      <a href="pdf.html">Document</a> lu et approuvé
+                    </label>
+                </div>
+            </div>
+            <h3>Signature</h3>
+            <div id="sketchpad"></div>
+            <div class="row justify-content-center">
+                <button type="button" id="btnClearPad" class="customButton" style="background-color: #0d6efd;">Effacer</button>
+            </div>
+            <div class=" row justify-content-center ">
+                <button type="button" id="btnCreateContract" class="customButton" style="background-color: #198754;">Créer le contrat</button>
+            </div>
+            <div class="row justify-content-center ">
+                <button type="button" id="btnReturn" class="customButton" style="background-color: #0d6efd;">Retour</button>
+            </div>
+            <div>
+                <div id="alertPopUp"></div>
+            </div>
         </div>
     </main>
     <!-- Jquery -->
     <script src="js/lib/jquery/jquery-3.5.1.min.js"></script>
     <!-- Bootstrap -->
     <script src="js/lib/bootstrap/bootstrap.min.js"></script>
-    <!-- Bootstrap-table -->
-    <script src="js/lib/bootstrap-table/bootstrap-table.min.js"></script>
-    <script src="js/lib/bootstrap-table/bootstrap-table-fr-CH.js"></script>
+    <!-- Responsive-sketchpad -->
+    <script src="js/lib/responsive-sketchpad/dist/sketchpad.js"></script>
     <!-- Cordova -->
     <script src="cordova.js"></script>
     <!-- Your custom app scripts -->
-    <script src="js/navbar.js"></script>
-    <script src="js/home.js"></script>
+    <script src="js/navbar.js "></script>
+    <script src="js/createFile.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,55 @@
+<!--
+Auteur : Jonathan Borel-Jaquet - T.IS-E2A
+Date : 01/03/21
+Description : Vue html permettant l'affichage de la condition d'inscription.
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="
+      worker-src blob:; 
+      child-src blob: gap:;
+      img-src 'self' blob: data:;
+      default-src res://pdf/conditionsInscription.pdf * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#2196f3">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>Inscription</title>
+
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/pdfjs/mypdf.css" />
+</head>
+
+<body>
+    <main role="main">
+        <div id="app">
+            <div role="toolbar" id="toolbar">
+                <div id="pager">
+                    <button data-pager="prev">Précédente</button>
+                    <button data-pager="next">Suivante</button>
+                </div>
+            </div>
+            <div id="viewport-container">
+                <div role="main" id="viewport"></div>
+            </div>
+            <button onclick="window.history.back()" style="height: 50px;">Retour</button>
+        </div>
+    </main>
+    <!-- Jquery -->
+    <script src="js/lib/jquery/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/lib/bootstrap/bootstrap.min.js"></script>
+    <!-- Cordova -->
+    <script src="cordova.js"></script>
+    <!-- PDF.JS -->
+    <script src="https://unpkg.com/pdfjs-dist@2.0.489/build/pdf.min.js"></script>
+    <!-- Your custom app scripts -->
+    <script src="js/navbar.js"></script>
+</body>
+
+</html>
