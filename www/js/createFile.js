@@ -14,13 +14,6 @@ var pad = new Sketchpad(el, {
 });
 
 /**
- * @desc Événement resize de la vue
- */
-window.onresize = function(e) {
-    pad.resize(el.offsetWidth);
-}
-
-/**
  * @desc Événement click du bouton de création de contrat.
  */
 $("#btnCreateContract").on("click", function() {

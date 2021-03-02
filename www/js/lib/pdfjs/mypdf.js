@@ -14,7 +14,7 @@
             render();
         });
     };
-    initPDFViewer("http://www.cms.fss.ulaval.ca/recherche/upload/rech_soc/fichiers/exemple.pdf");
+    initPDFViewer("https://api-douceur-de-chien.boreljaquet.ch/storage/conditionsInscription.pdf");
 
 
 
