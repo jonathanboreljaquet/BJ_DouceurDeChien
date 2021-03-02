@@ -236,7 +236,16 @@ function downloadPDF(token, serial_number) {
  * @param {Object} blob - Objet Blob.
  */
 function saveBlob2File(fileName, blob) {
-    var folder = cordova.file.externalRootDirectory + 'Download'
+    var folder ="";
+    switch (device.platform) {
+        case "Android":
+            folder = cordova.file.externalRootDirectory + 'Download'
+            break;
+        case "iOS":
+            folder = cordova.file.documentsDirectory;
+            break;
+
+    }
     window.resolveLocalFileSystemURL(folder, function(dirEntry) {
         console.log('file system open: ' + dirEntry.name)
         createFile(dirEntry, fileName, blob)
